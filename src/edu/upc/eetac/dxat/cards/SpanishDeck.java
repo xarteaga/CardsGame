@@ -1,7 +1,5 @@
 package edu.upc.eetac.dxat.cards;
 
-import javax.swing.text.NumberFormatter;
-
 public class SpanishDeck extends Deck {
 
 	public SpanishDeck() {
