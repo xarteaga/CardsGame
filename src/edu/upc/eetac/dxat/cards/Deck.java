@@ -88,20 +88,21 @@ public abstract class Deck {
 	
 	@Override
 	public String toString (){
-		String str = "";
+		String str = "Deck [";
 	
-		str = str + "Available in pile: ";
+		str = str + "AvailablePile=[";
 		for (int i = 0; i < this.dealPtr+1; i++){
-			str = str + this.cards[i].toString() + "; ";
+			str = str + this.cards[i].toString() + ", ";
 		}
 		
-		str = str + "\n\nIn discard pile: ";
+		str = str + "]; DiscardPile=[";
 		for (int i = 0; i < this.discardPtr; i++){
-			str = str + this.discard[i].toString() + "; ";
+			str = str + this.discard[i].toString() + ", ";
 		}
 		
-		str = str + "\n";
+		str = str + "]]";
 		
 		return str;
 	}
+	
 }

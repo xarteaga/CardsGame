@@ -5,26 +5,21 @@ import edu.upc.eetac.dxat.cards.*;
 public class TestCard {
 
 	public static void main(String[] args) {
-		
+
 		// Show welcome
 		System.out.println("Welcome to DXAT card game...");
 		System.out.println("----------------------------------------------");
-		
-		Deck myDeck = new UNODeck();
-		Card myCard = null;
-		Boolean finished = false;
 
-		myDeck.shuffle();
-		System.out.println(myDeck.toString());
+		String[] names = {"Alex","Jesus", "Gerard", "Marti", "Xavier"};
 		
-		while (!finished) {
-			myCard = myDeck.deal();
-
-			if (myCard != null) {
-				System.out.print(myCard.toString()+"; ");
-			} else {
-				finished = true;
-			}
-		}
+		Engine myEngine = new UNOEngine (names);
+		System.out.println(myEngine.toString());
+		
+		Deck spanishDeck = new SpanishDeck();
+		Deck frenchDeck = new FrenchDeck();
+		
+		System.out.println(spanishDeck.toString());
+		System.out.println(frenchDeck.toString());
+		
 	}
 }

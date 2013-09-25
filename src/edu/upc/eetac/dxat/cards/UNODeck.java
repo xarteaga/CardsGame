@@ -13,16 +13,17 @@ public class UNODeck extends Deck {
 		int k = 0; // Card counter
 
 		// Generate Colour cards
-		for (int i = 0; i < 12 * 4; i++) {
-			super.cards[k + 0] = new UNOCard(i);
-			super.cards[k + 1] = new UNOCard(i);
-			k += 2;
+		for (int j = 0; j < 4; j++){
+			for (int i = 0; i < 12; i++) {
+				super.cards[k + 0] = new UNOCard(i+j*14);
+				super.cards[k + 1] = new UNOCard(i+j*14);
+				k += 2;
+			}
 		}
-
-		// Generate other cards
+		// Generate Wild cards
 		for (int i = 0; i < 4; i++) {
-			super.cards[k + 0] = new UNOCard(12 * 4);
-			super.cards[k + 1] = new UNOCard(13 * 4);
+			super.cards[k + 0] = new UNOCard(12 + 4*14);
+			super.cards[k + 1] = new UNOCard(13 + 4*14);
 			k += 2;
 		}
 	}

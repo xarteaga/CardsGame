@@ -17,8 +17,15 @@ public class SpanishDeck extends Deck {
 
 	@Override
 	public void recycleDiscard() {
-		// TODO Auto-generated method stub
-		
+		// Return the discard pile into the available cards pile
+		while (super.discardPtr > 0) {
+			super.dealPtr++;
+			super.discardPtr--;
+			super.cards[super.dealPtr] = super.discard[super.discardPtr];
+		}
+
+		// Shuffle deck with the discard pile
+		super.shuffle();		
 	}
 
 }

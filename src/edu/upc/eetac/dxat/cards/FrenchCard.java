@@ -1,10 +1,10 @@
 package edu.upc.eetac.dxat.cards;
 
-public class SpanishCard extends Card {
-	public final static String [] NUMBERS = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"};
-	public final static String [] SUITS = {"Oros", "Bastos", "Copas", "Espadas"};
+public class FrenchCard extends Card{
+	public final static String [] NUMBERS = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
+	public final static String [] SUITS = {"Clubs", "Diamonds", "Hearts", "Spades"};
 	
-	public SpanishCard(int id) {
+	public FrenchCard(int id) {
 		super(id);
 		// TODO Auto-generated constructor stub
 	}
@@ -20,6 +20,5 @@ public class SpanishCard extends Card {
 		// TODO Auto-generated method stub
 		return SUITS[super.getId()/NUMBERS.length];
 	}
-	
 
 }
